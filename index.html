@@ -1,55 +1,65 @@
-<!DOCTYPE html>
+<!DOCTYPE>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hangman</title>
-    <!-- add favicon -->
-    <!-- add reset.css and style.css -->
-    <!-- refer to previous homework's comments, to apply to this and future assignments-->
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body onload="userGuess();">
-    <header>
-        <div class="container">
-            <div class="row">
-                <div class="column">
-                    <button type="button" class="changeColor" onclick="changeBackground();">Change Background Color</button>
 
-                    <button type="button" class="changeMusic" onclick="changeMusic();">Change Music</button><br/>
+<body>
+    <div class="gameTitle"><h1>HANGMAN</h1>
+    </div>
+
+    <!-----------change the font for h1---------------- -->
+
+
+
+    <!-- ------------------hangman images and letters guessed---------------->
+
+
+    <div class="card" style="width: 18rem;">
+        <div class="card-body" id="answerSection">
+            <h3 class="correctAnswer">- - - - - </h3>
+            <button href="#" class="btn btn-primary" id="button" onclick="function hint();">Hint</button>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body" id="lettersGuessed">
+                        <h3>Letters Guessed: </h3>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-sm-4">
+                <div class=hangmanImage>
+                    <img src="assets/images/Hangman-1.png" alt="image 1 of 7 of hangman" class="hangman">
                 </div>
             </div>
         </div>
-    </header> 
-    
-    <div class="heading">
-    <h1><u>Hangman</u></h1><br/>
     </div>
-            
     
+          
     
-    <div class="hangmanImages">
-        <div class="container">
-            <div class="row1HintLetters">
-                <div class="column3Hint">
-                    <h2>Hint: </h2>
-                </div>
-
-                <div class="column4LettersGuessed">
-                    <h2>Letters<br/> Guessed: </h2>
-                    document.write(userGuess())
-                </div>
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-sm-3" id="hangmanImage">
+                <div> <img src="assets/images/Hangman-1.png"></div>
             </div>
         </div>
-    </div>
-
-   
-    <footer> </footer>
-    <!-- link to javascript -->
-    <script type="text/javascript" src="./assets/javascript/game.js"></script>
-
+            <div class="col-sm-3" id="lettersGuessed">
+                <div class="letters">Letters Guessed:</div>
+            </div>
+    </div> -->
     
+        <script src="assets/javascript/game.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
+
+
 </html>

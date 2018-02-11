@@ -7,17 +7,26 @@ function changeBackground(){
     document.body.style.backgroundColor=colors[Math.floor(Math.random() * colors.length)];
 };
 
-function userGuess(){
+
+button.onclick=function hint(){alert("...words,...a hint.");
+}
+
+
+var correctAnswers= [];[]
+
+
+/* function userGuess(){
     var correctLetters=["f","u","n"];
-    var guess=prompt("Pick a letter.");
+    var guess=prompt("Pick a letter."); */
     
     
-    for (i=0; i<correctLetters.length; i++);
+  /*   for (i=0; i<correctLetters.length; i++){
     if (guess===correctLetters[i]){
         alert("That's correct!");
     }else{
         alert("Incorrect. Please try again.");
+        getElementById()document.write(guess);
     }
-}
+}} */
         //getElementById:"column4LettersGuessed" document.write(guess);
         
