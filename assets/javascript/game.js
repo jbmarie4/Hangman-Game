@@ -1,18 +1,31 @@
 
-function changeBackground(){
+/* function changeBackground(){
    var colors = ["lightyellow", "pink", "lightgreen" , "lightblue" , "lavender"];
 
     //for(i=0; i<colors.length; i++){document.body.style.backgroundColor=(colors[i])} ?
     
     document.body.style.backgroundColor=colors[Math.floor(Math.random() * colors.length)];
-};
+}; */
 
 
-button.onclick=function hint(){alert("...words,...a hint.");
+button.onclick=function hint(){
+    alert("...words,...a hint.");
 }
 
 
-var correctAnswers= [];[]
+
+var answers= ["one","two","three","four","five","six","seven","eight","nine","ten"];
+
+function randomWord(){
+    var randomItem=Math.floor(Math.random()*answers.length);
+    for (var i=0; i<=answers.length; i++){
+    console.log(answers[randomItem]);
+    document.getElementById("correctAnswer").innerHTML=(answers[randomItem]);
+//document.getElementsByClassName("correctAnswer").innerHTML=answers[randomItem]
+}
+}
+
+
 
 
 /* function userGuess(){

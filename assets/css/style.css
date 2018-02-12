@@ -14,15 +14,26 @@ body{
 }
 
 #button{
+    border:1px solid transparent;
+    margin-top:-50px;
     float:right;
     color:black;
     background-color:yellow;
     border:2px solid black;
-    margin-top:-30px;
+    margin-top:-150px;
 }
 
 .card{
     border:none;
+}
+
+#correctAnswer{
+    border:1px solid transparent;
+    margin-top:70px;
+    font-weight:bold;
+    font-size:45px;
+    letter-spacing:20px;
+    text-align:center;
 }
 
 footer{
