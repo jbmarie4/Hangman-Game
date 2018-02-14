@@ -40,14 +40,15 @@ var answers= ["one","two","three","four","five","six","seven","eight","nine","te
 
 function randomWord(){
     var randomItem=[Math.floor(Math.random()*answers.length)];
+    console.log(randomItem);
     var blankAnswer=[];
     for (var i=0; i<randomItem.length; i++){
-    document.getElementById("correctAnswer").innerHTML=(answers.length + "_");
-    console.log(answers[randomItem]);
-    document.getElementById("correctAnswer").innerHTML=(answers[randomItem]);
+        blankAnswer[i]="_";
+    alert(blankAnswer.join (" "));
 //document.getElementsByClassName("correctAnswer").innerHTML=answers[randomItem]
 }
 }
+
 
 
 
