@@ -11,7 +11,7 @@
 document.getElementById("userGuess").innerHTML=answer;
 console.log(answer); */
 
-button.onclick=function markLetter(){
+/* button.onclick=function markLetter(){
     var aKey= "a";
     document.getElementById("userGuess").innerHTML=akey;
     console.log(akey);
@@ -25,7 +25,7 @@ button.onclick=function recordGuess(e){
    console.log("keyCode=" +keyCode);
                                  //user type letter and letter appears in userGuess section
 };
-
+ */
 
 
 
@@ -36,18 +36,32 @@ button.onclick=function hint(){
 
 
 
-var answers= ["one","two","three","four","five","six","seven","eight","nine","ten"];
+var answers= ["violin" , "piano","guitar","cello"];
+var hints=["hint1","hint2","hint3","hint4"];
 
 function randomWord(){
-    var randomItem=[Math.floor(Math.random()*answers.length)];
-    console.log(randomItem);
+    var randomItem=answers[Math.floor(Math.random()*answers.length)];
     var blankAnswer=[];
     for (var i=0; i<randomItem.length; i++){
         blankAnswer[i]="_";
-    alert(blankAnswer.join (" "));
+    document.getElementById("correctAnswer").innerHTML=(blankAnswer.join (" "));
+    console.log(randomItem);
+    var lettersRemaining=randomItem.length;
 //document.getElementsByClassName("correctAnswer").innerHTML=answers[randomItem]
+    var userAttempt=prompt("pick a letter");
+    for (var x=0; x<userAttempt.length; x++){
+        if(answers[x] === userAttempt){
+            blankAnswer[x]= userAttempt;
+            
+        }
+    }
+    }
+
 }
-}
+
+
+
+
 
 
 
