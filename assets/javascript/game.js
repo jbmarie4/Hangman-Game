@@ -7,9 +7,31 @@
     document.body.style.backgroundColor=colors[Math.floor(Math.random() * colors.length)];
 }; */
 
+/* var answer=prompt("pick a letter");
+document.getElementById("userGuess").innerHTML=answer;
+console.log(answer); */
+
+button.onclick=function markLetter(){
+    var aKey= "a";
+    document.getElementById("userGuess").innerHTML=akey;
+    console.log(akey);
+}
+
+
+button.onclick=function recordGuess(e){
+    var evt= e ? e:event;
+    var keyCode= evt.keyCode;
+   document.getElementById("userGuess").innerHTML=
+   console.log("keyCode=" +keyCode);
+                                 //user type letter and letter appears in userGuess section
+};
+
+
+
+
 
 button.onclick=function hint(){
-    alert("...words,...a hint.");
+    alert("...words,...a hint.")
 }
 
 
@@ -17,8 +39,10 @@ button.onclick=function hint(){
 var answers= ["one","two","three","four","five","six","seven","eight","nine","ten"];
 
 function randomWord(){
-    var randomItem=Math.floor(Math.random()*answers.length);
-    for (var i=0; i<=answers.length; i++){
+    var randomItem=[Math.floor(Math.random()*answers.length)];
+    var blankAnswer=[];
+    for (var i=0; i<randomItem.length; i++){
+    document.getElementById("correctAnswer").innerHTML=(answers.length + "_");
     console.log(answers[randomItem]);
     document.getElementById("correctAnswer").innerHTML=(answers[randomItem]);
 //document.getElementsByClassName("correctAnswer").innerHTML=answers[randomItem]

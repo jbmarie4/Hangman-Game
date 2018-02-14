@@ -1,14 +1,17 @@
 <!DOCTYPE>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-    <header></header>
-    <div class="gameTitle"><h1>HANGMAN <button onclick="randomWord();">reset</button></h1>
+    <div class="gameTitle">
+        <h1>HANGMAN</h1>
+    </div>
+    <div class="reset button"> 
+    <button type="button" class="btn btn-secondary" id="button2" onclick="randomWord()"  onkeyup="recordGuess();">Start</button>
     </div>
 
     <!-----------change the font for h1---------------- -->
@@ -18,13 +21,7 @@
     <!-- ------------------hangman images and letters guessed---------------->
 
 
-    <div class="card" style="width: 18rem;">
-        <div class="card-body" id="answerSection">
-            <h3> </h3>
-            <p id="correctAnswer">..</p>
-            <button href="#" class="btn btn-primary" id="button" onclick="function hint();">Hint</button>
-        </div>
-    </div>
+    
     
     <div class="container">
         <div class="row">
@@ -32,6 +29,9 @@
                 <div class="card" style="width: 18rem;">
                     <div class="card-body" id="lettersGuessed">
                         <h3>Letters Guessed: </h3>
+                        <div id="userGuess">
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -43,9 +43,14 @@
             </div>
 
             <div class="col-sm-5">
-                <div class=pictureFrame>
-                    <!--picture-->
-                </div>
+                    <div class="card">
+                            <div class="card-body" id="answerSection">
+                                <h3> </h3>
+                                <p id="correctAnswer">____
+                                </p>
+                                <button type="button" class="btn btn-secondary" id="button" onclick="function hint();">Hint?</button><br/>
+                            </div>
+                        </div>
             </div>
         </div>
     </div>
