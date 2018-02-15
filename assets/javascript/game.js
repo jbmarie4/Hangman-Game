@@ -37,7 +37,9 @@ button.onclick=function hint(){
 
 
 var answers= ["violin" , "piano","guitar","cello"];
-var hints=["hint1","hint2","hint3","hint4"];
+
+
+//var hints=["hint1","hint2","hint3","hint4"];
 
 function randomWord(){
     var randomItem=answers[Math.floor(Math.random()*answers.length)];
